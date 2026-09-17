@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definitely Not McDonald's</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="DNM Logo" class="logo">
+        <h1>Definitely Not McDonald's</h1>
+        <div class="user-info" id="userInfo">
+            <!-- Сюда JS вставит приветствие или кнопку входа -->
+        </div>
+    </header>
+
+    <!-- Модальное окно входа/регистрации -->
+    <div id="authModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2 id="modalTitle">Bejelentkezés</h2>
+            <div id="authError" class="error"></div>
+            <input type="text" id="username" placeholder="Felhasználónév">
+            <input type="password" id="password" placeholder="Jelszó">
+            <div id="passHint" class="hint">
+                A jelszónak tartalmaznia kell: legalább 8 karakter, nagybetű, szám, speciális karakter és szóköz.
+            </div>
+            <button id="authBtn" onclick="handleAuth()">Bejelentkezés</button>
+            <button class="link-btn" onclick="switchMode()" id="switchBtn">Nincs fiókod? Regisztrálj!</button>
+            <button class="link-btn" onclick="toggleAuth()">Bezárás</button>
+        </div>
+    </div>
+
+    <main>
+        <h2>Éhes vagy? Rendelj otthonra!</h2>
+        <div class="menu-grid">
+            <!-- Обычные бургеры -->
+            <div class="item">
+                <img src="img/burger1.jpg" alt="Sajtburger">
+                <h3>Sajtburger</h3>
+                <p>Klasszikus, de nem az a klasszikus.</p>
+                <p class="price">1500 Ft</p>
+                <button onclick="addToCart('Sajtburger', 1500)">Kosárba</button>
+            </div>
+            <div class="item">
+                <img src="img/menu.jpg" alt="Nagy Menü">
+                <h3>Nagy DNM Menü</h3>
+                <p>Krumpli, burger, üdítő. A lényeg.</p>
+                <p class="price">2500 Ft</p>
+                <button onclick="addToCart('Nagy DNM Menü', 2500)">Kosárba</button>
+            </div>
+            <!-- Смешные бургеры -->
+            <div class="item">
+                <img src="img/mammoth.jpg" alt="Mamut Burger">
+                <h3>Mamut Hús Burger</h3>
+                <p>Ősrégi ízek, modern köntösben.</p>
+                <p class="price">3500 Ft</p>
+                <button onclick="addToCart('Mamut Hús Burger', 3500)">Kosárba</button>
+            </div>
+            <div class="item">
+                <img src="img/weed.jpg" alt="Fű Burger">
+                <h3>Fűszeres Fű Burger</h3>
+                <p>Különleges fűszerezés, ami ellazít.</p>
+                <p class="price">4200 Ft</p>
+                <button onclick="addToCart('Fűszeres Fű Burger', 4200)">Kosárba</button>
+            </div>
+        </div>
+
+        <div class="cart-section">
+            <h2>Kosár</h2>
+            <ul id="cartList"></ul>
+            <p>Összesen: <span id="totalPrice">0</span> Ft</p>
+            <h3>Szállítási mód:</h3>
+            <select id="deliveryType">
+                <option value="Házhozszállítás">Házhozszállítás (Kb. 30 perc)</option>
+                <option value="Elvitel">Elvitel (Átvétel az üzletben)</option>
+            </select>
+            <button onclick="checkout()">Megrendelés</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

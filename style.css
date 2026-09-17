@@ -1,0 +1,20 @@
+.link-btn {
+    background: none;
+    border: none;
+    color: #00ff00;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.hint {
+    font-size: 0.75em;
+    color: #aaa;
+    margin: 5px 0;
+}
+
+.user-info button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
