@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DNM™ — Definitely Not McDonalds | Street Food Since 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700;900&family=Permanent+Marker&family=Rock+Salt&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#C6FF00"/>
+          <stop offset="100%" stop-color="#FF2D95"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="url(#logoGrad)" stroke-width="3"/>
+      <polygon points="50,15 82,32.5 82,67.5 50,85 18,67.5 18,32.5" fill="url(#logoGrad)" opacity="0.15"/>
+      <text x="50" y="58" font-family="Anton, sans-serif" font-size="30" font-weight="900" fill="url(#logoGrad)" text-anchor="middle" letter-spacing="1">DNM</text>
+      <circle cx="78" cy="22" r="4" fill="#C6FF00"/>
+      <circle cx="22" cy="78" r="3" fill="#FF2D95"/>
+    </svg>
+    <div class="logo-text">
+      <span class="main">DNM™</span>
+      <span class="sub">Definitely Not McD</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#menu">Menü</a></li>
+    <li><a href="#story">Történet</a></li>
+    <li><a href="#location">Helyszín</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="cart-btn" id="cartBtn" title="Kosár megnyitása">
+      🛒
+      <span class="badge" id="cartBadge">0</span>
+    </button>
+    <button class="nav-cta" id="orderNowBtn">Rendelj most</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-logo">
+        <svg class="hero-logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C6FF00"/>
+              <stop offset="100%" stop-color="#FF2D95"/>
+            </linearGradient>
+          </defs>
+          <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="url(#heroGrad)" stroke-width="3"/>
+          <polygon points="50,15 82,32.5 82,67.5 50,85 18,67.5 18,32.5" fill="url(#heroGrad)" opacity="0.15"/>
+          <text x="50" y="58" font-family="Anton, sans-serif" font-size="30" font-weight="900" fill="url(#heroGrad)" text-anchor="middle" letter-spacing="1">DNM</text>
+          <circle cx="78" cy="22" r="4" fill="#C6FF00"/>
+          <circle cx="22" cy="78" r="3" fill="#FF2D95"/>
+        </svg>
+        <div class="hero-logo-text">
+          <span class="main">DNM™</span>
+          <span class="sub">Street Food · Since 2025</span>
+        </div>
+      </div>
+
+      <span class="hero-tag">// megint éhes vagy? jó. gyere.</span>
+
+      <h1>
+        <span class="outline">Definitely</span>
+        <span class="fill">Not <span class="accent">McD</span></span>
+        <span class="outline">onalds™</span>
+      </h1>
+
+      <p class="hero-sub">
+        Ez <strong>nem az a hely, ahol a "burger" szó műanyagot jelent.</strong> A nevünk vicc, a kajánk viszont <span class="highlight">halálosan komoly.</span> Minden reggel friss zsemle, helyi hús, házi szósz — és semmi, ami a fagyasztóból jön.
+      </p>
+
+      <div class="hero-manifesto">
+        <div class="line"><span class="dot"></span>Nem vagyunk McDonalds. <strong>Tényleg nem.</strong></div>
+        <div class="line"><span class="dot"></span>Nincs bohóc. <strong>Nincs játszótér.</strong> Csak kaja.</div>
+        <div class="line"><span class="dot"></span>Ha a "Big Mac"-et keresed — <strong>sok szerencsét.</strong></div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="n">64</div><div class="l">Termék</div></div>
+        <div class="hero-stat"><div class="n">10</div><div class="l">Kategória</div></div>
+        <div class="hero-stat"><div class="n">100%</div><div class="l">Friss</div></div>
+        <div class="hero-stat"><div class="n">0</div><div class="l">Bohóc</div></div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#menu" class="btn-primary">Menü böngészése</a>
+        <a href="#story" class="btn-ghost">Mi ez az egész?</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-deco d1">DNM</div>
+      <div class="hero-deco d2">2025</div>
+
+      <div class="float-card c1" style="--rot: -6deg;">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80&auto=format&fit=crop" alt="Smash Burger">
+        </div>
+        <div class="info">
+          <div class="name">Smash Burger</div>
+          <div class="price">2 490 Ft</div>
+        </div>
+      </div>
+
+      <div class="float-card c2" style="--rot: 5deg;">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?w=400&q=80&auto=format&fit=crop" alt="Crispy Chicken">
+        </div>
+        <div class="info">
+          <div class="name">Crispy Chicken</div>
+          <div class="price">2 290 Ft</div>
+        </div>
+      </div>
+
+      <div class="float-card c3" style="--rot: 3deg;">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400&q=80&auto=format&fit=crop" alt="Loaded Fries">
+        </div>
+        <div class="info">
+          <div class="name">Loaded Fries</div>
+          <div class="price">1 590 Ft</div>
+        </div>
+      </div>
+
+      <div class="float-card c4" style="--rot: -4deg;">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400&q=80&auto=format&fit=crop" alt="Classic Cola">
+        </div>
+        <div class="info">
+          <div class="name">Classic Cola</div>
+          <div class="price">690 Ft</div>
+        </div>
+      </div>
+
+      <div class="hero-badge">
+        <div class="inner">
+          <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#C6FF00"/>
+                <stop offset="100%" stop-color="#FF2D95"/>
+              </linearGradient>
+            </defs>
+            <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="url(#badgeGrad)" stroke-width="3"/>
+            <text x="50" y="58" font-family="Anton, sans-serif" font-size="30" font-weight="900" fill="url(#badgeGrad)" text-anchor="middle" letter-spacing="1">DNM</text>
+          </svg>
+          <div class="txt">DNM</div>
+          <div class="sub">est. 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-marquee">
+    <div class="marquee-track">
+      <span>Smash Burger</span><span>Crispy Chicken</span><span>Loaded Fries</span>
+      <span>Buffalo Wings</span><span>Milkshake</span><span>Nuggets</span>
+      <span>Chili Cheese</span><span>Vegan Burger</span><span>Onion Rings</span>
+      <span>Family Combo</span>
+      <span>Smash Burger</span><span>Crispy Chicken</span><span>Loaded Fries</span>
+      <span>Buffalo Wings</span><span>Milkshake</span><span>Nuggets</span>
+      <span>Chili Cheese</span><span>Vegan Burger</span><span>Onion Rings</span>
+      <span>Family Combo</span>
+    </div>
+  </div>
+</header>
+
+<!-- MENU HEADER -->
+<section class="menu-section" id="menu">
+  <div class="section-wrap">
+    <div class="menu-header">
+      <div>
+        <div class="section-label">01 — A teljes menü</div>
+        <h2 class="section-title">Amit <em>kapsz</em></h2>
+      </div>
+      <div class="menu-header-right" id="totalCount">// betöltés...</div>
+    </div>
+
+    <div class="menu-controls">
+      <div class="search-box">
+        <span class="icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Keress terméket... (pl. burger, cola, wings)">
+      </div>
+      <div class="filter-chips" id="filterChips">
+        <button class="chip active" data-filter="all">Összes</button>
+        <button class="chip" data-filter="vega">Vega</button>
+        <button class="chip" data-filter="csipos">Csípős</button>
+        <button class="chip" data-filter="uj">Új</button>
+        <button class="chip" data-filter="premium">Prémium</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY CATEGORY NAV -->
+<div class="category-nav">
+  <div class="category-nav-inner" id="categoryNav">
+    <a href="#cat-burgers" class="cat-pill"><span class="num">01</span> Burgerek</a>
+    <a href="#cat-chicken" class="cat-pill"><span class="num">02</span> Csirke &amp; Nuggets</a>
+    <a href="#cat-wings" class="cat-pill"><span class="num">03</span> Wings</a>
+    <a href="#cat-fries" class="cat-pill"><span class="num">04</span> Fries</a>
+    <a href="#cat-sides" class="cat-pill"><span class="num">05</span> Sides</a>
+    <a href="#cat-drinks" class="cat-pill"><span class="num">06</span> Üdítők</a>
+    <a href="#cat-shakes" class="cat-pill"><span class="num">07</span> Shake &amp; Desszert</a>
+    <a href="#cat-sauces" class="cat-pill"><span class="num">08</span> Szószok</a>
+    <a href="#cat-family" class="cat-pill"><span class="num">09</span> Családi</a>
+    <a href="#cat-kids" class="cat-pill"><span class="num">10</span> Gyerek</a>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="menu-section" style="padding-top: 0;">
+  <div class="section-wrap">
+    <div id="productsContainer"></div>
+    <div class="no-results" id="noResults">
+      <div class="big">404</div>
+      <div>Nincs találat. Próbálj mást keresni. (Vagy ne. Nekünk mindegy.)</div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="story-visual">
+      <div class="big-text">2025</div>
+      <div class="marker">// definitely not</div>
+    </div>
+    <div class="story-content">
+      <div class="section-label">02 — A sztori</div>
+      <h2>Nem <em>McD</em>, az biztos</h2>
+      <p>A DNM 2025-ben indult egy kis utcai standdal, mert elegünk lett abból, hogy a „gyorsétterem" szó egyet jelent a műanyag ízzel és a fagyasztott hússal. <strong>Nem akartunk franchise lenni.</strong> Nem akartunk drive-thrut. Csak főzni akartunk valamit, ami tényleg jó.</p>
+      <p>A név onnan jött, hogy mindenki azt kérdezte: „Ez most olyan, mint a McDonalds?" A válasz: <strong>definitely not.</strong> Aztán megtartottuk, mert vicces. Meg mert igaz. Ha valaki mégis összekever minket a bohóccal — <strong>az az ő baja.</strong></p>
+      <p>Minden reggel friss zsemlét sütünk. A húst helyi termelőktől szerezzük be. A szószokat magunk keverjük. <strong>64 termék</strong>, de mind mögött valódi kaja áll. És egy csomó rossz vicc.</p>
+      <div class="story-stats">
+        <div class="stat"><div class="num">64</div><div class="lbl">Termék</div></div>
+        <div class="stat"><div class="num">100%</div><div class="lbl">Friss</div></div>
+        <div class="stat"><div class="num">0</div><div class="lbl">Fagyasztott</div></div>
+        <div class="stat"><div class="num">0</div><div class="lbl">Bohóc</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="loc-inner">
+    <div class="section-label">03 — Merre találsz</div>
+    <h2 class="section-title">Gyere <em>éhesen</em></h2>
+    <div class="loc-grid">
+      <div class="loc-map">
+        <div class="grid-lines"></div>
+        <div class="pin">
+          <div class="dot"></div>
+          <div class="label">DNM Stand · Budapest</div>
+        </div>
+      </div>
+      <div class="loc-info">
+        <h3>Nyitvatartás</h3>
+        <ul class="hours-list">
+          <li><span class="day">Hétfő</span><span class="time">Zárva (mint a McD, de nekünk megvan az okunk)</span></li>
+          <li><span class="day">Kedd – Csütörtök</span><span class="time">11:30 – 21:00</span></li>
+          <li class="today"><span class="day">Péntek – Szombat</span><span class="time">11:30 – 23:00</span></li>
+          <li><span class="day">Vasárnap</span><span class="time">12:00 – 20:00</span></li>
+        </ul>
+        <div class="contact-line"><span class="k">Cím:</span><span class="v">1052 Budapest, Váci utca 42.</span></div>
+        <div class="contact-line"><span class="k">Tel:</span><span class="v">+36 30 123 4567</span></div>
+        <div class="contact-line"><span class="k">Email:</span><span class="v">hello@dnm.hu (nem a McD-é)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <h2>Éhes vagy már?</h2>
+  <p>// 64 termék. egy helyen. és nem, ez nem a McDonalds.</p>
+  <a href="#menu" class="btn-dark" id="ctaOrderBtn">Rendelés indítása</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="footGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C6FF00"/>
+              <stop offset="100%" stop-color="#FF2D95"/>
+            </linearGradient>
+          </defs>
+          <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="url(#footGrad)" stroke-width="3"/>
+          <text x="50" y="58" font-family="Anton, sans-serif" font-size="30" font-weight="900" fill="url(#footGrad)" text-anchor="middle" letter-spacing="1">DNM</text>
+        </svg>
+        <div class="logo-text">
+          <span class="main">DNM™</span>
+          <span class="sub">Definitely Not McD</span>
+        </div>
+      </a>
+      <p style="margin-top: 16px;">Definitely Not McDonalds. Utcai kaja, füst, neon, és semmi műanyag. 2025 óta. A bohóc nálunk nem játszik.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Menü</h4>
+      <ul>
+        <li><a href="#cat-burgers">Burgerek</a></li>
+        <li><a href="#cat-chicken">Csirke</a></li>
+        <li><a href="#cat-wings">Wings</a></li>
+        <li><a href="#cat-fries">Fries</a></li>
+        <li><a href="#cat-drinks">Üdítők</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <ul>
+        <li><a href="#story">Rólunk</a></li>
+        <li><a href="#location">Nyitvatartás</a></li>
+        <li><a href="#">Allergének</a></li>
+        <li><a href="#">Karrier (nem bohóckodunk)</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kövess</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">X</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 DNM — Definitely Not McDonalds™</span>
+    <span class="disclaimer">Nem áll kapcsolatban a McDonald's-szal. Vicc volt. Nyugi. (De tényleg.)</span>
+  </div>
+</footer>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- CART PANEL -->
+<aside class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>Kosár <span class="count-pill" id="cartCountPill">0</span></h3>
+    <button class="cart-close" id="cartClose" title="Bezárás">×</button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty">
+      <div class="icon">🛒</div>
+      <div class="title">Üres a kosár</div>
+      <div class="sub">Ez most olyan, mint a McD kajája: üres és szomorú.</div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-summary">
+      <span>Részösszeg</span>
+      <span id="cartSubtotal">0 Ft</span>
+    </div>
+    <div class="cart-summary">
+      <span>Szállítás</span>
+      <span style="color: var(--neon);">INGYENES (nem McD)</span>
+    </div>
+    <div class="cart-summary total">
+      <span>ÖSSZESEN</span>
+      <span class="value" id="cartTotal">0 Ft</span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn" disabled>Rendelés leadása</button>
+    <div class="cart-joke" id="cartJoke">// tedd be a kaját, nem lesz bohóc</div>
+  </div>
+</aside>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span class="check">✓</span>
+  <span id="toastText">Hozzáadva a kosárhoz</span>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="checkout-modal" id="checkoutModal">
+  <div class="checkout-content">
+    <div class="big-icon">🎉</div>
+    <h2>Rendelés leadva!</h2>
+    <p>Kösz, hogy minket választottál.</p>
+    <p>És nem, <strong>tényleg nem</strong> vagyunk a McDonalds.</p>
+    <div class="order-num" id="orderNum">#DNM-0000</div>
+    <div class="joke" id="checkoutJoke">// a bohóc nem jön. soha.</div>
+    <button class="checkout-close" id="checkoutClose">Rendben, csá</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
